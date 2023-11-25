@@ -8,7 +8,7 @@ let intentos = 3;
 function numeroAlAzar() {
   numeroAleatorio = Math.floor(Math.random() * 11); // decidi limitar los numeros del 1 al 10 para hacer mas facil la prueba
   botonComenzarJuego.disabled = true;
-  console.log(numeroAleatorio);
+  //console.log(numeroAleatorio);
 }
 
 function enviarNumero() {
@@ -23,13 +23,13 @@ function enviarNumero() {
       alert("El numero ingresado es menor al numero magico");
       intentos -= 1;
       numeroIntentos.innerHTML = `Numero de intentos: ${intentos}`;
-      console.log(intentos)
+      
 
     } else {
       alert("El numero ingresado es mayor al numero magico");
       intentos -= 1;
       numeroIntentos.innerHTML = `Numero de intentos: ${intentos}`;
-      console.log(intentos)
+      
     }
 
     if (intentos === 0){
