@@ -24,14 +24,15 @@
         <h1>Ejercicio 1 Tp5</h1>
         <section>
             <button type="button" id="btnComenzar" class="btn btn-primary my-5 comenzar">¡Comenzar Juego!</button>
+            <p id="intentos">Numero de intentos: 3</p>
         </section>
         <section>
             <form>
                 <div class="mb-3 d-flex justify-content-center align-items-center flex-column ">
-                <label for="exampleFormControlInput1" class="form-label">Ingrese un numero:</label>
-                  <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                
+                  <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese un numero">
                 </div>
-                <button type="submit" id="btnEnviar" class="btn btn-primary my-4 enviar">Enviar</button>
+                <button type="button" id="btnEnviar" class="btn btn-primary my-4 enviar" onclick="enviarNumero()">Enviar</button>
               </form>
         </section>
     </main>
