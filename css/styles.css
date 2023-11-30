@@ -10,11 +10,14 @@ main{
 
 .comenzar{
     width: 50%;
-    height: 80px;
+    font-size: 40px;
+    color: white;
 }
 
 .enviar{
     width: 50%;
+    font-size: 20px;
+    color: white;
 }
 
 .form-control{
@@ -27,6 +30,7 @@ main{
     .comenzar{
         width: 100%;
         height: 80px;
+        font-size: 20px;
     }
     
     .enviar{
