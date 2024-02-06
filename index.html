@@ -13,15 +13,18 @@
     <title>Ejercicio 1 TP-5</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar bg-dark text-light text-center">
-        <div class="container-fluid d-flex justify-content-center">
-          <a class="navbar-brand text-bg-dark" href="#">Practico 5</a>
-        </div>
-      </nav>
-    </header>
     <main class="container-fluid p-5 text-center bg-dark text-dark">
       <section>
+        <p class="text-white">
+          Selecciona un Número: Comienza presionando el boton "¡Comenzar juego!" luego digitando un número del 1 al 10 en el
+          campo de entrada provisto. Este será tu intento para descubrir el
+          número mágico.
+        </p>
+
+        <p class="text-white">
+          ¡Adivina! Una vez que hayas ingresado tu número, el juego te revelará
+          si has acertado o no. Tienes 3 intentos
+        </p>
         <button
           type="button"
           id="btnComenzar"
@@ -42,10 +45,10 @@
               id="numero"
               aria-describedby="emailHelp"
               placeholder="Digite un numero del 1 al 10"
-              min="1" max="10"
+              min="1"
+              max="10"
               disabled
               required
-
             />
           </div>
           <button
