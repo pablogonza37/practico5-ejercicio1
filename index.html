@@ -23,15 +23,15 @@
     <main class="container-fluid p-5 text-center  bg-dark text-dark">
         <section>
             <button type="button" id="btnComenzar" class="btn btn-warning my-5 comenzar"><span id="adininar">¡Comenzar Juego!</span></button>
-            <p id="intentos" class="text-white">Numero de intentos: 3</p>
+            <p id="intentos" class="text-white"></p>
         </section>
         <section>
-            <form>
+          <form onsubmit="enviarNumero(event)">
                 <div class="mb-3 d-flex justify-content-center align-items-center flex-column ">
                 
-                  <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese un numero">
+                  <input type="number" class="form-control" id="numero" aria-describedby="emailHelp" placeholder="Es un numero del 1 al 10"  disabled required>
                 </div>
-                <button type="button" id="btnEnviar" class="btn btn-warning my-4 enviar" onclick="enviarNumero()">Enviar</button>
+                <button type="submit" id="btnEnviar" class="btn btn-warning my-4 enviar" disabled>Enviar</button>
               </form>
         </section>
     </main>
