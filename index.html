@@ -13,27 +13,54 @@
     <title>Ejercicio 1 TP-5</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar bg-dark text-light text-center">
-        <div class="container-fluid d-flex justify-content-center">
-          <a class="navbar-brand text-bg-dark" href="#">Practico 5</a>
-        </div>
-      </nav>
-    </header>
-    <main class="container-fluid p-5 text-center  bg-dark text-dark">
-        <section>
-            <button type="button" id="btnComenzar" class="btn btn-warning my-5 comenzar"><span id="adininar">¡Comenzar Juego!</span></button>
-            <p id="intentos" class="text-white">Numero de intentos: 3</p>
-        </section>
-        <section>
-            <form>
-                <div class="mb-3 d-flex justify-content-center align-items-center flex-column ">
-                
-                  <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese un numero">
-                </div>
-                <button type="button" id="btnEnviar" class="btn btn-warning my-4 enviar" onclick="enviarNumero()">Enviar</button>
-              </form>
-        </section>
+    <main class="container-fluid p-5 text-center bg-dark text-dark">
+      <section>
+        <p class="text-white">
+          Selecciona un Número: Comienza presionando el boton "¡Comenzar juego!" luego digitando un número del 1 al 10 en el
+          campo de entrada provisto. Este será tu intento para descubrir el
+          número mágico.
+        </p>
+
+        <p class="text-white">
+          ¡Adivina! Una vez que hayas ingresado tu número, el juego te revelará
+          si has acertado o no. Tienes 3 intentos
+        </p>
+        <button
+          type="button"
+          id="btnComenzar"
+          class="btn btn-warning my-5 comenzar"
+        >
+          <span id="adininar">¡Comenzar Juego!</span>
+        </button>
+        <p id="intentos" class="text-white"></p>
+      </section>
+      <section>
+        <form onsubmit="enviarNumero(event) ">
+          <div
+            class="mb-3 d-flex justify-content-center align-items-center flex-column"
+          >
+            <input
+              type="number"
+              class="form-control"
+              id="numero"
+              aria-describedby="emailHelp"
+              placeholder="Digite un numero del 1 al 10"
+              min="1"
+              max="10"
+              disabled
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            id="btnEnviar"
+            class="btn btn-warning my-4 enviar"
+            disabled
+          >
+            Enviar
+          </button>
+        </form>
+      </section>
     </main>
     <footer class="bg-dark text-light py-4 text-center">
       <p>&copy; Todos los derechos reservados</p>
