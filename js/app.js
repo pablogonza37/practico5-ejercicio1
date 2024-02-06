@@ -18,14 +18,21 @@ function numeroAlAzar() {
 }
 
 function enviarNumero(event) {
-  event.preventDefault(); // Evita que el formulario se envíe y la página se actualice
-  
-  if (numeroElegido.value < 0) {
+  event.preventDefault();
+  parseInt(numeroElegido.value);
+
+  if (
+    isNaN(numeroElegido.value) ||
+    numeroElegido.value < 1 ||
+    numeroElegido.value > 10
+  ) {
+    alert("Por favor, ingrese un número entre 1 y 10.");
+  }else if (numeroElegido.value < 0) {
     alert("Ingrese un numero positivo");
   } else {
     if (numeroAleatorio == numeroElegido.value) {
       alert("¡FELICIDADES!, has adivinado el numero magico");
-      // No es recomendable recargar la página con location.reload() para reiniciar el juego
+
       reiniciarJuego();
     } else if (numeroAleatorio > numeroElegido.value) {
       alert("El numero ingresado es menor al numero magico");
@@ -55,6 +62,4 @@ function reiniciarJuego() {
   location.reload();
 }
 
-
 botonComenzarJuego.addEventListener("click", numeroAlAzar);
-//botonEnviar.addEventListener("submit", enviarNumero);

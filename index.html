@@ -20,20 +20,44 @@
         </div>
       </nav>
     </header>
-    <main class="container-fluid p-5 text-center  bg-dark text-dark">
-        <section>
-            <button type="button" id="btnComenzar" class="btn btn-warning my-5 comenzar"><span id="adininar">¡Comenzar Juego!</span></button>
-            <p id="intentos" class="text-white"></p>
-        </section>
-        <section>
-          <form onsubmit="enviarNumero(event)">
-                <div class="mb-3 d-flex justify-content-center align-items-center flex-column ">
-                
-                  <input type="number" class="form-control" id="numero" aria-describedby="emailHelp" placeholder="Es un numero del 1 al 10"  disabled required>
-                </div>
-                <button type="submit" id="btnEnviar" class="btn btn-warning my-4 enviar" disabled>Enviar</button>
-              </form>
-        </section>
+    <main class="container-fluid p-5 text-center bg-dark text-dark">
+      <section>
+        <button
+          type="button"
+          id="btnComenzar"
+          class="btn btn-warning my-5 comenzar"
+        >
+          <span id="adininar">¡Comenzar Juego!</span>
+        </button>
+        <p id="intentos" class="text-white"></p>
+      </section>
+      <section>
+        <form onsubmit="enviarNumero(event) ">
+          <div
+            class="mb-3 d-flex justify-content-center align-items-center flex-column"
+          >
+            <input
+              type="number"
+              class="form-control"
+              id="numero"
+              aria-describedby="emailHelp"
+              placeholder="Digite un numero del 1 al 10"
+              min="1" max="10"
+              disabled
+              required
+
+            />
+          </div>
+          <button
+            type="submit"
+            id="btnEnviar"
+            class="btn btn-warning my-4 enviar"
+            disabled
+          >
+            Enviar
+          </button>
+        </form>
+      </section>
     </main>
     <footer class="bg-dark text-light py-4 text-center">
       <p>&copy; Todos los derechos reservados</p>
